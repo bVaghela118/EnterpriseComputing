@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Add Candidates</title>
+
+</head>
+
+<body>
+    <div>
+      <h1><center><u>Add Candidate Form</u></center></h1>
+        <form action="/addNew" method="POST">
+            <div >
+             <label for="Name">Student Id</label>
+                <input type="text"  name="studentid" placeholder="Enter Your ID" Required>
+                    
+                </div>
+            <div>
+                <label for="Name">Student Name</label>
+                <input type="text"  placeholder="Enter Your Name" name="studentname" Required>
+                
+                </div>
+            <center><button type="submit" >Submit</button></center>
+        </form>
+    </div>
+    <!-- <table class='table table-responsive' style="width:50%;">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Student ID</th>
+                <th scope="col">Student Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% candidate.forEach(data =>{ %>
+                <tr>
+                    <td scope="row">
+                        <%= data.ID %>
+                    </td>
+                    <td scope="row"> 
+                        <%= data.name %>
+                    </td>
+                </tr>
+                <% }) %>
+
+        </tbody>
+    </table> -->
+    <div >
+    <table >
+  <thead>
+    <tr>
+      <th scope="col">Student ID</th>
+      <th scope="col">Student Name</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% candidate.forEach(data =>{ %>
+    <tr>
+      <td><%= data.ID %></td>
+      <td><%= data.name %></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
+<center><a href="/" >Home</a></center> 
+</div>
+</body>
+
+</html>
